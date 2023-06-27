@@ -1,0 +1,168 @@
+@import "../../styles/colors.scss";
+@import "../../styles/shadows.scss";
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 6rem 0rem;
+    @media (min-width: 1025px) and (max-width: 1300px){
+    }
+    @media (min-width: 760px) and (max-width: 1024px) {
+        flex-direction: column;
+        margin: 5rem 0rem;
+    }
+    @media (min-width: 480px) and (max-width: 759px) {
+        flex-direction: column;
+        margin: 3rem 0rem;
+    }
+    @media (max-width: 479px) {
+        flex-direction: column;
+        margin: 2rem 0rem;
+    }
+    &.reverse {
+        flex-direction: row-reverse;
+        @media (min-width: 1025px) and (max-width: 1300px){
+        }
+        @media (min-width: 760px) and (max-width: 1024px) {
+            flex-direction: column;
+        }
+        @media (min-width: 480px) and (max-width: 759px) {
+            flex-direction: column;
+        }
+        @media (max-width: 479px) {
+            flex-direction: column;
+        }
+        .project-img img {
+            transform:
+              perspective(800px)
+              rotateY(-25deg) scale(0.8)
+              rotateX(10deg);
+              filter: blur(0px);
+              opacity: 1;
+              transition: 0.6s ease all;
+              &:hover {
+                box-shadow: $projectReverseImgHoverShadow;
+                transform:
+                  perspective(800px)
+                  rotateY(15deg)
+                  translateY(50px)
+                  rotateX(10deg)
+                  scale(1);
+                filter: blur(.2px);
+                opacity: 1;
+              }
+        }
+    }
+    .project-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        @media (min-width: 1025px) and (max-width: 1300px){
+        }
+        @media (min-width: 760px) and (max-width: 1024px) {
+            width: 100%;
+        }
+        @media (min-width: 480px) and (max-width: 759px) {
+            width: 100%;
+        }
+        @media (max-width: 479px) {
+            width: 100%;
+        }
+        img {
+            width: 700px;
+            height: 398px;
+            border-radius: 15px;
+            box-shadow: $projectImgShadow;
+            transform:
+              perspective(800px)
+              rotateY(25deg) scale(0.8)
+              rotateX(10deg);
+              filter: blur(0px);
+              opacity: 1;
+              transition: 0.6s ease all;
+              &:hover {
+                box-shadow: $projectReverseImgShadow;
+                transform:
+                  perspective(800px)
+                  rotateY(-15deg)
+                  translateY(-50px)
+                  rotateX(10deg)
+                  scale(1);
+                filter: blur(.2px);
+                opacity: 1;
+              }
+            @media (min-width: 480px) and (max-width: 759px) {
+                width: 500px;
+                height: 284px;
+            }
+            @media (max-width: 479px) {
+                width: 350px;
+                height: 199px;
+            }
+        }
+    }
+    .project-detail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 40%;
+        color: $textColorSecondary;
+        padding: 1rem;
+        @media (min-width: 1025px) and (max-width: 1300px){
+        }
+        @media (min-width: 760px) and (max-width: 1024px) {
+            width: 100%;
+        }
+        @media (min-width: 480px) and (max-width: 759px) {
+            width: 100%;
+        }
+        @media (max-width: 479px) {
+            width: 100%;
+        }
+        h4 {
+           border: 3px solid $secondaryGreen;
+           color: $secondaryGreen;
+           box-shadow: $projectDetailsShadow;
+           text-transform: uppercase; 
+           font-weight: 700;
+           padding: .7rem 1.1rem;
+           font-family: "Cyborg"; // fix this
+           font-weight: 900;
+           margin-bottom: 3rem;
+           @media (min-width: 1025px) and (max-width: 1300px){
+        }
+        @media (min-width: 760px) and (max-width: 1024px) {
+        }
+        @media (min-width: 480px) and (max-width: 759px) {
+            font-size: 1.8rem;
+        }
+        @media (max-width: 479px) {
+            font-size: 1.5rem;
+        }
+        }
+        p {
+            margin: 0;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 3.5rem;
+            @media (min-width: 1025px) and (max-width: 1300px){
+            }
+            @media (min-width: 760px) and (max-width: 1024px) {
+            }
+            @media (min-width: 480px) and (max-width: 759px) {
+                font-size: 17px;
+            }
+            @media (max-width: 479px) {
+                font-size: 16px;
+            }
+            span {
+                color: $secondaryGreen;
+            }
+        }
+
+    }
+}

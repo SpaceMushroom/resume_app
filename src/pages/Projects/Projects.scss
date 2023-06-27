@@ -1,0 +1,41 @@
+@import "../../styles/colors.scss";
+@import "../../styles/shadows.scss";
+
+.work {
+    margin-top: 5rem;
+
+    .work-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-left: 5rem;
+
+        .curly {
+            color: $pirmaryGreen;
+            font-size: 2rem; 
+            margin: 0.3rem;
+            padding: 0;
+            line-height: 2rem;
+            font-weight: 900;
+            }
+        span {
+            display: flex;
+
+            h2 {
+               line-height: 2rem;
+                margin: 0;
+                font-family: "Cyborg";
+                font-weight: 900;
+                color: $textColorSecondary;
+            }
+        }
+    }
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 0 7rem 0;
+        padding: 0rem 5rem;
+    }
+}

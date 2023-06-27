@@ -1,0 +1,17 @@
+@import "../../styles/colors.scss";
+
+header {
+    height: 10dvh;
+    background-color: $pirmaryGreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+
