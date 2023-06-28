@@ -1,0 +1,55 @@
+@import "../../styles/colors.scss";
+
+.box-content {
+    flex: 0 18%;
+    height: 60px;
+    margin: 1%;
+    border-radius: 8px;
+    background: rgba(#021709, 1);  //fix this
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    @media (min-width: 480px) and (max-width: 759px) {
+        flex: 0 30%;
+    }
+    @media (max-width: 479px) {
+        flex: 0 30%;
+        height: 50px;
+    }
+    .box-icon {
+        * {
+            height: 40px;
+            width: 40px;
+            color: $pirmaryGreen;
+            @media (min-width: 1025px) and (max-width: 1300px){
+                height: 32px;
+                width: 32px;
+            }
+            @media (min-width: 760px) and (max-width: 1024px) {
+                width: 25px;
+                height: 25px;
+            } 
+            @media (max-width: 479px) {
+                width: 21px;
+                height: 21px;
+            }
+        }
+    }
+    .box-text {
+        p {
+            font-size: 18px;
+            color: $textColorSecondary;
+            text-transform: capitalize;
+            font-weight: 700;
+            @media (min-width: 1025px) and (max-width: 1300px){
+                font-size: 16px;
+            }
+            @media (min-width: 760px) and (max-width: 1024px) {
+                font-size: 16px;
+            }
+            @media (max-width: 479px) {
+                font-size: 12px;
+            } 
+        }
+    }
+}

@@ -1,3 +1,17 @@
-main-container {
-    min-height: 100rem;
-}
+@import "../../styles/colors.scss";
+
+
+.home {
+    max-width: 100% !important;
+    width: 100%;
+    margin: 0;
+    overflow: hidden !important;
+    .hero {
+        height: 100dvh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $pirmaryGreen;
+    }
+} 
