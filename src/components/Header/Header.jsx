@@ -1,5 +1,7 @@
 // import { Link } from "react-router-dom";
 // import { navigationItems } from "../../routes/const";
+import { FaInfo } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import "./Header.scss";
 
 const Header = () => {
@@ -7,7 +9,10 @@ const Header = () => {
     <>
       <div className="header">
         {/* // fix this shit */}
-        <div className="logo">LOGO</div>
+        <div className="logo" style={{ display: "flex" }}>
+          <FaInfo className="info" />
+          <FaGoogle style={{ width: "50px", height: "50px" }} />
+        </div>
         <div className="menu-toggle">
           <input type="checkbox" className="nav__checkbox" id="nav-toggle" />
           <label htmlFor="nav-toggle" className="nav__button">

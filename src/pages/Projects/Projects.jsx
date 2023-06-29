@@ -1,6 +1,7 @@
 import Project from "../../components/Project/Project";
-import "./Projects.scss";
 import { MAIN_ROUTE as main } from "../../routes/const";
+import { myProjects } from "../../consts/projects";
+import "./Projects.scss";
 
 const Projects = () => {
   return (
@@ -13,29 +14,15 @@ const Projects = () => {
         <span className="curly">{"}"}</span>
       </div>
       <div className="projects">
-        <Project
-          image={
-            "https://1.bp.blogspot.com/-i78iKr_P9Pk/X9ohjXyc5eI/AAAAAAAAA_4/8UauxZaOgUshGK7MXwW1gZqts7Zrf_AewCLcBGAsYHQ/s1280/Todo%2BList%2BApp%2Busing%2BHTML%2BCSS%2B%2526%2BJavaScript.webp"
-          }
-          title={"Todos app"}
-          subtitle={
-            <>
-              <span>Todos app </span>
-              subtitle Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Illum sunt eum eos porro ratione ipsum eaque culpa reiciendis .
-            </>
-          }
-          url={main}
-        />
-        <Project
-          reverse={"reverse"}
-          image={
-            "https://1.bp.blogspot.com/-i78iKr_P9Pk/X9ohjXyc5eI/AAAAAAAAA_4/8UauxZaOgUshGK7MXwW1gZqts7Zrf_AewCLcBGAsYHQ/s1280/Todo%2BList%2BApp%2Busing%2BHTML%2BCSS%2B%2526%2BJavaScript.webp"
-          }
-          title={"Todos app"}
-          subtitle={"Todos app subtitle"}
-          url={main}
-        />
+        {myProjects.map((project, index) => (
+          <Project
+            image={project.image}
+            title={project.title}
+            subtitle={project.subtitle}
+            url={project.link}
+            reverse={index % 2 === 1 ? "reverse" : undefined}
+          />
+        ))}
       </div>
     </div>
   );

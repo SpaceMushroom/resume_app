@@ -2,23 +2,14 @@ import Skills from "../../components/Skills/Skills";
 import "./Main.scss";
 
 const Main = () => {
-  const hiddenElements = document.querySelectorAll(".hidden");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
-    });
-  });
-
-  hiddenElements.forEach((el) => observer.observe(el));
   return (
     <div className="home">
       <div className="hero">
         <h1>Hero</h1>
+        <img
+          src="file:///C:/Users/IG/Downloads/png-transparent-programmer-computer-programming-software-programming-s-computer-computer-program-programming-language[1]_adobe_express.svg"
+          alt="icon"
+        />
       </div>
       <Skills />
     </div>

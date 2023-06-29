@@ -1,0 +1,26 @@
+.social-mail {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    background: #10ba46; //fix this
+    cursor: pointer;
+    .link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: white;
+        .icon {
+            * {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        p {
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.github-box {
+    width: 100%;
+    background: #333333;
+    color: #d6d6d6;
+    height: 9rem;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    @media (max-width: 759px) {
+        width: 100%;
+        padding: 0 1.5rem;
+        justify-content: space-between;
+        height: 4.5rem;
+    }
+    &:hover, &:focus {
+        opacity: .7;
+    }
+    .icon {
+        * {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    p {
+        font-size: 3.5rem;
+        font-weight: 600;
+        margin: 0;
+        @media (min-width: 1025px) and (max-width: 1300px) {
+            font-size: 3.1rem;
+        }
+        @media (min-width: 760px) and (max-width: 1024px) {
+            font-size: 2.9rem;
+        }
+        @media (min-width: 480px) and (max-width: 759px) {
+            font-size: 2.6rem;
+            padding-right: 3rem;
+        }
+        @media (max-width: 479px) {
+            font-size: 2.1rem;
+            padding-right: 3rem;
+        }
+    }
+}

@@ -25,9 +25,19 @@
         cursor: pointer;
         position: fixed;
         padding: 0;
+        width: 50px;
+        height: 50px;
         z-index: 500;
         left: 5rem;
         top: 7px;
+        .info {
+            width: 27px; 
+            height: 27px;
+            animation: glowing 2s infinite;
+        }
+       
+        
+        
         @media (min-width: 1025px) and (max-width: 1300px){
             // width: 86px;
             // height: 87px;
@@ -696,6 +706,14 @@
     }
   }
 
-
-
-
+  @keyframes glowing {
+    0% {
+      text-shadow: 0 0 3px #fff;
+    }
+    50% {
+      text-shadow: 0 0 5px #fff, 0 0 1px #203828, 0 0 15px #173f24;
+    }
+    100% {
+      text-shadow: 0 0 3px #fff;
+    }
+  }
