@@ -1,0 +1,79 @@
+@import "../../styles/colors.scss";
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 90dvh;
+
+  .swiper {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    left: calc(50% - 22.5%);
+    top: 5%;
+
+    @media (min-width: 1025px) and (max-width: 1300px) {
+      width: 50%;
+      left: calc(50% - 25%);
+    }
+    @media (min-width: 760px) and (max-width: 1024px) {
+      width: 60%;
+      left: calc(50% - 30%);
+    }
+    @media (min-width: 480px) and (max-width: 759px) {
+      width: 70%;
+      left: calc(50% - 35%);
+    }
+    @media (max-width: 479px) {
+      width: 80%;
+      left: calc(50% - 40%);
+    }
+    &slide {
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 70%;
+
+  @media (min-width: 1025px) and (max-width: 1300px) {
+  }
+  @media (min-width: 760px) and (max-width: 1024px) {
+    height: 60%;
+  }
+  @media (min-width: 480px) and (max-width: 759px) {
+    height: 50%;
+  }
+  @media (max-width: 479px) {
+    height: 40%;
+  }
+}
+
+.swiper-cube .swiper-cube-shadow:before {
+  background: $textColor;
+  opacity: 0.3;
+}
+
+.container {
+  width: 100%;
+  height: 30%;
+  color: $textColorSecondary;
+
+  .iner {
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      color: $textColor;
+    }
+  }
+
+  h3 {
+    margin: 0;
+  }
+}

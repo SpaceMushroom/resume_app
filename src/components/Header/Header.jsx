@@ -1,7 +1,4 @@
-// import { Link } from "react-router-dom";
-// import { navigationItems } from "../../routes/const";
-import { FaInfo } from "react-icons/fa";
-import { FaGoogle } from "react-icons/fa";
+import { FaGoogle, FaInfo } from "react-icons/fa";
 import "./Header.scss";
 
 const Header = () => {

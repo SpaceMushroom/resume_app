@@ -1,6 +1,7 @@
 @import "../../styles/colors.scss";
 
 footer {
+    padding-top: 6rem;
     .social {
         display: flex;
         flex-direction: column;
@@ -13,7 +14,7 @@ footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            min-width: 100%;
+            width: 100%;
             @media (min-width: 480px) and (max-width: 1024px) {
                 flex-wrap: wrap;
                 justify-content: center;

@@ -44,4 +44,17 @@ export const myProjects = [
     ),
     link: "https://github.com/SpaceMushroom/MembershipManagement",
   },
+  {
+    image: memberships,
+    title: "Memberships and users management",
+    subtitle: (
+      <>
+        The <span>Node.js</span> and <span>MongoDB</span> project aims to
+        develop a membership and user management system. It utilizes Node.js for
+        server-side JavaScript execution and MongoDB as a flexible and scalable
+        NoSQL database.
+      </>
+    ),
+    link: "https://github.com/SpaceMushroom/MembershipManagement",
+  },
 ];

@@ -1,5 +1,4 @@
 import Project from "../../components/Project/Project";
-import { MAIN_ROUTE as main } from "../../routes/const";
 import { myProjects } from "../../consts/projects";
 import "./Projects.scss";
 

@@ -1,142 +1,58 @@
 .tooling {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 0;
-    &.hidden {
-    opacity: 0;
- }
- &.show {
-     opacity: 1;
-     .tooling-title {
-        animation: flipInY 2s ease forwards;
-        backface-visibility: visible !important;
-     }
-     .tooling-box {
-        animation: jackInTheBox 2s ease forwards;
-     }
- }
-    .tooling-title {
-        background: #12141d;
-        border-radius: 12px;
-        padding: .8rem 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 5rem;
-        box-shadow: 0px 0px 4px 1px rgba(20,233,86,1) inset;
-        -webkit-box-shadow: 0px 0px 4px 1px rgba(20,233,86,1) inset;
-        -moz-box-shadow: 0px 0px 4px 1px rgba(20,233,86,1) inset;
-        transform: rotate(0.01turn);
-        @media (min-width: 1025px) and (max-width: 1300px){
-         padding: .7rem 1.7rem;
-        }
-        @media (min-width: 760px) and (max-width: 1024px) {
-         padding: .6rem 1.5rem;
-        }
-        @media (min-width: 480px) and (max-width: 759px) {
-         padding: .5rem 1.3rem;
-        }
-        @media (max-width: 479px) {
-            padding: .4rem 1.1rem;
-        }
-        h2 {
-            text-transform: uppercase;
-            margin: 0;
-            font-family: "Cyborg"; //fix this
-            font-weight: 900;
-            color: #14E956; //fix this
-            text-shadow:
-             3px  3px 0 #000,
-             -1px -1px 0 #000,  
-             1px -1px 0 #000,
-             -1px  1px 0 #000,
-             1px  1px 0 #000;
-             @supports (-webkit-text-stroke: .1px #000) {
-                 -webkit-text-stroke: .1px #000;
-                 -webkit-text-fill-color: #14E956; //fix this
-             }
-             @media (min-width: 1025px) and (max-width: 1300px){
-                 font-size: 2.5rem;
-             }
-             @media (min-width: 760px) and (max-width: 1024px) {
-                 font-size: 2.2rem;
-             }
-             @media (min-width: 480px) and (max-width: 759px) {
-                 font-size: 2rem;
-             }
-             @media (max-width: 479px) {
-                 font-size: 1.8rem;
-             }
-        }
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+
+  &.show {
+    opacity: 1;
+
     .tooling-box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        background: rgba(#0c8c34, 1);
-        border-radius: 15px;
-        width: 50%;
-        padding: .5rem;
-        @media (min-width: 1025px) and (max-width: 1300px){
-            padding: .4rem;
-        }
-        @media (min-width: 760px) and (max-width: 1024px) {
-            padding: .3rem;
-            width: 70%;
-        }
-        @media (min-width: 480px) and (max-width: 759px) {
-            width: 70%;
-        } 
-        @media (max-width: 479px) {
-            width: 80%;
-        }
-        
+      animation: jackInTheBox 2s ease forwards;
     }
- }
+  }
 
-@keyframes flipInY {
-    from {
-      transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-      animation-timing-function: ease-in;
-      opacity: 0;
+  .tooling-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(#0c8c34, 1);
+    border-radius: 15px;
+    width: 50%;
+    padding: 0.5rem;
+    margin: 5rem 0;
+    @media (min-width: 1025px) and (max-width: 1300px) {
+      padding: 0.4rem;
     }
-
-    40% {
-      transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-      animation-timing-function: ease-in;
+    @media (min-width: 760px) and (max-width: 1024px) {
+      padding: 0.3rem;
+      width: 70%;
     }
-
-    60% {
-      transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-      opacity: 1;
+    @media (min-width: 480px) and (max-width: 759px) {
+      width: 70%;
     }
-
-    80% {
-      transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    @media (max-width: 479px) {
+      width: 80%;
     }
-
-    to {
-      transform: perspective(400px);
-    }
+  }
 }
 
 @keyframes jackInTheBox {
-    from {
-      opacity: 0;
-      transform: scale(0.1) rotate(30deg);
-      transform-origin: center bottom;
-    }   
-    50% {
-      transform: rotate(-10deg);
-    }   
-    70% {
-      transform: rotate(3deg);
-    }   
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

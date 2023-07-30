@@ -3,7 +3,7 @@
     background: #0077b5;
     color: #cce4f0;
     height: 9rem;
-    padding: 0 1.5rem;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,6 +19,7 @@
         opacity: .7;
     }
     .icon {
+        padding-left: 2rem;
         * {
             width: 50px;
             height: 50px;

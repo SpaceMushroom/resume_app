@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Skill from "../Skill/Skill";
+import Title from "../Title/Title";
 
 import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
@@ -31,11 +32,9 @@ const Skills = () => {
 
   return (
     <div ref={sectionRef} className={`tooling ${isShow ? "show" : ""}`}>
-      <div className="tooling-title">
-        <h2>My skills</h2>
-      </div>
+      <Title title={"My skills"} />
       <div className="tooling-box">
-        <Skill icon={<FaReact />} title={"react"} />
+        <Skill icon={<FaReact />} title="react" />
         <Skill icon={<FaNodeJs />} title={"node"} />
         <Skill icon={<SiMongodb />} title={"mongoDB"} />
         <Skill icon={<SiJavascript />} title={"javaScript"} />
